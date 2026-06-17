@@ -1643,14 +1643,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       const action = form.getAttribute('action');
       const data = Object.fromEntries(new FormData(form).entries());
-      /* POST to GHL; use finally so success shows even if CORS blocks the response */
+      /* POST to GHL; redirect to thank-you regardless of CORS on the response */
       fetch(action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       }).finally(() => {
-        form.style.display = 'none';
-        success.style.display = 'block';
+        window.location.href = 'thank-you.html';
       });
     });
   }
