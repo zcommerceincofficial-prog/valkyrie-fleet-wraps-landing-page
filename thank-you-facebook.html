@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Valkyrie Fleet Wraps</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T78SB2DJ');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Fonts (async, non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+
+  <style>
+    :root {
+      --bg:       #090D22;
+      --bg-card:  #0D1229;
+      --gold:     #FFCD00;
+      --gold-dk:  #D4A900;
+      --blue:     #009DFF;
+      --cream:    #F0E6CE;
+      --white:    #FFFFFF;
+      --text:     #C8C8D8;
+      --muted:    #7A7A90;
+      --border:   #1A1E3A;
+      --ff-head:  'Bebas Neue', sans-serif;
+      --ff-body:  'Inter', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Main */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 55% at 50% 30%, rgba(255,205,0,.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 50% 100%, rgba(0,157,255,.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Card */
+    .card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 620px;
+      text-align: center;
+    }
+
+    /* Check badge */
+    .check {
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 30px;
+      border-radius: 50%;
+      background: rgba(255,205,0,.1);
+      border: 1px solid rgba(255,205,0,.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pop .5s cubic-bezier(.175,.885,.32,1.275) both;
+    }
+
+    @keyframes pop {
+      from { transform: scale(.6); opacity: 0; }
+      to   { transform: scale(1);  opacity: 1; }
+    }
+
+    .check svg { width: 44px; height: 44px; }
+
+    /* Eyebrow */
+    .eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    /* H1 */
+    h1 {
+      font-family: var(--ff-head);
+      font-size: clamp(54px, 9vw, 86px);
+      line-height: .96;
+      letter-spacing: 1px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    h1 em { color: var(--gold); font-style: normal; }
+
+    /* Messages */
+    .msg {
+      font-size: 19px;
+      color: var(--text);
+      max-width: 480px;
+      margin: 0 auto 8px;
+      line-height: 1.6;
+    }
+
+    .sub {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 44px;
+    }
+
+    /* Phone callout */
+    .phone-row {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 40px;
+    }
+
+    .phone-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .phone-num {
+      font-family: var(--ff-head);
+      font-size: clamp(38px, 7vw, 52px);
+      letter-spacing: 1px;
+      line-height: 1;
+      color: var(--cream);
+      text-decoration: none;
+      transition: color .15s;
+    }
+
+    .phone-num:hover { color: var(--gold); }
+
+    /* Action buttons */
+    .actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 32px;
+      border-radius: 50px;
+      font-family: var(--ff-body);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .4px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all .18s ease;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg);
+      border-color: var(--gold);
+    }
+    .btn-gold:hover {
+      background: var(--gold-dk);
+      border-color: var(--gold-dk);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,205,0,.2);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--cream);
+      border-color: rgba(240,230,206,.3);
+    }
+    .btn-ghost:hover {
+      border-color: var(--cream);
+      background: rgba(240,230,206,.07);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .15s;
+    }
+    footer a:hover { color: var(--cream); }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T78SB2DJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <a href="facebook.html">
+      <img src="logo.png" alt="Valkyrie Fleet Wraps" style="height:52px;width:auto;display:block;">
+    </a>
+  </header>
+
+  <main>
+    <div class="card">
+
+      <div class="check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFCD00" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <div class="eyebrow">Request Received</div>
+
+      <h1>Thank <em>You</em></h1>
+
+      <p class="msg">We got your request — we'll be in touch within <strong style="color:var(--cream)">1 business day</strong> with your custom quote.</p>
+      <p class="sub">Keep an eye on your phone and email. Want to talk sooner? Call or text us now.</p>
+
+      <div class="phone-row">
+        <span class="phone-label">Call or Text</span>
+        <a href="tel:5044445039" class="phone-num">(504) 444-5039</a>
+      </div>
+
+      <div class="actions">
+        <a href="tel:5044445039" class="btn btn-gold">📞 &nbsp;Call (504) 444-5039</a>
+        <a href="facebook.html" class="btn btn-ghost">← Back to Home</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Valkyrie Fleet Wraps &nbsp;·&nbsp; 5609 Salmen St STE C, New Orleans, LA 70123<br>
+    <a href="tel:5044445039">(504) 444-5039</a> &nbsp;·&nbsp; <a href="https://valkyriewraps.com" target="_blank" rel="noopener">valkyriewraps.com</a>
+  </footer>
+
+</body>
+</html>
