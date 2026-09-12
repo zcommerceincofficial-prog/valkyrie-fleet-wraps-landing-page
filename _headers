@@ -1,0 +1,21 @@
+# Security headers for the whole site, plus a defense-in-depth noindex header on the
+# thank-you page (it already carries <meta name="robots" content="noindex"> too).
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+/thank-you
+  X-Robots-Tag: noindex, nofollow
+
+# HTML: short cache so an edit reaches everyone within minutes
+/*.html
+  Cache-Control: public, max-age=300
+
+# images and fonts: long cache. A changed image needs a NEW filename.
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
