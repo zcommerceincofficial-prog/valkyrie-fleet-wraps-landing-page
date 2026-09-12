@@ -187,13 +187,20 @@ function measureSource() {
 
 function settleSource() {
   return async function settle() {
-    if (document.fonts && document.fonts.ready) { try { await document.fonts.ready; } catch (e) {} }
+    const withTimeout = (p, ms) => Promise.race([p, new Promise((r) => setTimeout(r, ms))]);
+    if (document.fonts && document.fonts.ready) { try { await withTimeout(document.fonts.ready, 3000); } catch (e) {} }
     const frame = () => new Promise((r) => requestAnimationFrame(() => r()));
     const step = Math.max(200, Math.floor(window.innerHeight * 0.9));
-    for (let y = 0; y < document.body.scrollHeight; y += step) { window.scrollTo(0, y); await frame(); await frame(); }
-    window.scrollTo(0, 0); await frame(); await frame();
+    const height = Math.min(document.body.scrollHeight, 40000); // hard cap, never loop forever
+    let y = 0;
+    let guard = 0;
+    while (y < height && guard < 200) { window.scrollTo(0, y); await frame(); y += step; guard++; }
+    window.scrollTo(0, 0); await frame();
     const imgs = [...document.images].filter((i) => !i.complete);
-    await Promise.all(imgs.map((i) => new Promise((r) => { i.addEventListener('load', r, { once: true }); i.addEventListener('error', r, { once: true }); })));
+    await withTimeout(
+      Promise.all(imgs.map((i) => new Promise((r) => { i.addEventListener('load', r, { once: true }); i.addEventListener('error', r, { once: true }); }))),
+      4000
+    );
   };
 }
 
